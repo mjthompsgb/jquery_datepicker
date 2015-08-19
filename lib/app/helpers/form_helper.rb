@@ -28,8 +28,8 @@ module JqueryDatepicker::FormBuilder
   end
 end
 
-class JqueryDatepicker::InstanceTag < ActionView::Helpers::InstanceTag
-
+class JqueryDatepicker::InstanceTag # < ActionView::Helpers::InstanceTag
+  include ActionView::Helpers::ActiveModelInstanceTag
   FORMAT_REPLACEMENTES = { "yy" => "%Y", "mm" => "%m", "dd" => "%d", "d" => "%-d", "m" => "%-m", "y" => "%y", "M" => "%b"}
 
   # Extending ActionView::Helpers::InstanceTag module to make Rails build the name and id
